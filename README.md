@@ -12,6 +12,7 @@ This repository is intended to simplify setting up CI/CD required for Gen3 data 
 
 * `terraform` version `v0.14.6` was used for this repo. A `.terraform.lock.hcl` [file](https://discuss.hashicorp.com/t/terraform-0-14-the-dependency-lock-file/15696) is included and depends on Terraform 0.14
 * A shell environment, preferrably bash
+* Necessary Azure subscription role assignments to create service principals and assign roles.
 
 ## What gets configured?
 
