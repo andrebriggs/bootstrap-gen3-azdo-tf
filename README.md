@@ -4,7 +4,7 @@ This repository is intended to simplify setting up CI/CD required for Gen3 data 
 
 * Deploy Azure dependencies required for automated CI/CD of Terraform deployments
 * Configure variables in AzDO required for automated CI/CD of Terraform deployments
-* Configure dependencies for each environment of the Rush Gen3 data commons(`dev`, `integration`, `prod`, etc...)
+* Configure dependencies for each environment of the Gen3 data commons(`dev`, `integration`, `prod`, etc...)
 
 > **Note**: This does not deploy instances of the Gen3 environment on Azure. It only sets up the dependencies needed to do that deployment.
 
