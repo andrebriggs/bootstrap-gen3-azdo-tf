@@ -1,7 +1,7 @@
 // This section creates a project
 # resource "azuredevops_project" "project" {}
 resource "azuredevops_project" "project" {
-  name       = "BedrockRocks"
+  name       = var.azure_devops_project_name
   # visibility         = "organization"
   version_control    = "Git"
   work_item_template = "Scrum"

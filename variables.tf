@@ -10,6 +10,12 @@ variable "resource_group_name" {
   default = "abrig-gen3-ci-rg" # TODO: Change this
 }
 
+variable "azure_devops_project_name" {
+  type        = string
+  description = "Name of the Azure DevOps project that is hosting the bootstrap"
+  default = "BedrockRocks"
+}
+
 variable "build_agent_image_name" {
   type        = string
   description = "Name of Docker images that will be used for a build agent"
