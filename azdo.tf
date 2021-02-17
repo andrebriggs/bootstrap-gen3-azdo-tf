@@ -1,3 +1,6 @@
+locals{
+  formatted_timestamp  = formatdate("EEEE, DD-MMM-YY hh:mm:ss ZZZ", timestamp())
+}
 // This section creates a project
 # resource "azuredevops_project" "project" {}
 resource "azuredevops_project" "project" {
@@ -5,7 +8,7 @@ resource "azuredevops_project" "project" {
   # visibility         = "organization"
   version_control    = "Git"
   work_item_template = "Scrum"
-  description = "[Managed with Terraform] Updated with Terraform Azure DevOps Provider!"
+  description = format("[Managed with Terraform] Last update %s \n\n Rush, aims to leverage the Gen3 data platform to enable a secure, self-service model to access clinical metadata and genomic research data. From here, Rush can extend the Gen3 platform to support more sophisticated, analytical use-cases.",local.formatted_timestamp) 
 }
 
 # resource "tls_private_key" "node-ssh-key" {
@@ -86,5 +89,5 @@ resource "azuredevops_variable_group" "vg" {
 
 resource "azuredevops_agent_pool" "pool" {
   name           = var.agent_pool_name
-  auto_provision = false
+  auto_provision = true
 }
