@@ -4,12 +4,6 @@ variable "environment_name" {
   description = "The name of the environment"
 }
 
-variable "info_tag_name" {
-  type        = string
-  description = "Identifier used to tag Azure Resources and provide context"
-  default = "abrig-testing" # TODO: change or eliminate this
-}
-
 variable "location" {
   type        = string
   description = "The region to deploy the environment to"

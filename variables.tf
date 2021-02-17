@@ -28,12 +28,6 @@ variable "agent_pool_name" {
   default = "rush-gen3-pool"
 }
 
-variable "info_tag_name" {
-  type        = string
-  description = "Identifier used to tag Azure Resources and provide context"
-  default = "abrig-testing" # TODO: change or eliminate this
-}
-
 # Below variables expected in as env vars with prefix TF_VAR_[ENV VAR]
 # e.g. export TF_VAR_AZDO_ORG_SERVICE_URL="https://dev.azure.com/abrig"
 variable AZDO_ORG_SERVICE_URL {}

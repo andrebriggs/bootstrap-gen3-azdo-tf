@@ -8,9 +8,6 @@ resource "random_string" "rand" {
 resource "azurerm_resource_group" "ci" {
   name     = var.resource_group_name
   location = var.location
-  tags = {
-    info = var.info_tag_name // TODO: Remove this. For testing in shared subscription
-  }
 }
 
 resource "azurerm_storage_account" "ci" {

@@ -7,7 +7,6 @@ resource "azurerm_resource_group" "rg" {
   name     = "rg-${local.full_name}"
   tags = {
     environment = var.environment_name
-    info = var.info_tag_name // TODO: Remove this. For testing in shared subscription
   }
 }
 
