@@ -44,7 +44,11 @@ resource "azuredevops_variable_group" "vg" {
     value     = var.AZDO_PAT
     is_secret = true
   }
-
+  variable {
+    name      = "ARM_ACCESS_KEY"
+    value     = azurerm_storage_account.ci.primary_access_key
+    is_secret = true
+  }
   variable {
     name  = "RESOURCE_GROUP"
     value = var.resource_group_name

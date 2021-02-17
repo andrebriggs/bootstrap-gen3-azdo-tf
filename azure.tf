@@ -36,6 +36,7 @@ module "dev" {
   environment_name              = "dev"
   location                      = var.location
   subscription_id               = data.azurerm_client_config.current.subscription_id
+  azuredevops_project_id        = azuredevops_project.project.id
   backend_storage_account_name  = azurerm_storage_account.ci.name
 }
 # Uncomment when ready for morer environments
@@ -45,6 +46,7 @@ module "dev" {
 #   environment_name              = "integration"
 #   location                      = var.location
 #   subscription_id               = data.azurerm_client_config.current.subscription_id
+#   azuredevops_project_id        = data.azuredevops_project.project.id
 #   backend_storage_account_name  = azurerm_storage_account.ci.name
 # }
 
@@ -54,5 +56,6 @@ module "dev" {
 #   environment_name              = "prod"
 #   location                      = var.location
 #   subscription_id               = data.azurerm_client_config.current.subscription_id
+#   azuredevops_project_id        = data.azuredevops_project.project.id
 #   backend_storage_account_name  = azurerm_storage_account.ci.name
 # }

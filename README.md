@@ -154,6 +154,7 @@ module "pre-prod" {
   environment_name              = "pre-prod"
   location                      = var.location
   subscription_id               = data.azurerm_client_config.current.subscription_id
+  azuredevops_project_id        = data.azuredevops_project.project.id
   backend_storage_account_name  = azurerm_storage_account.ci.name
 }
 ```
