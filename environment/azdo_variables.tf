@@ -23,7 +23,7 @@ locals {
 resource "azuredevops_variable_group" "vg" {
   project_id   = var.azuredevops_project_id
   name         = format("%s-gen3-vg", upper(var.environment_name))
-  description  = "A variable group with variables needed for environment specific CI/CD"
+  description  = format("[Managed with Terraform] Variables needed for CI/CD with the %s environment", upper(var.environment_name))
   allow_access = false
 
   variable {

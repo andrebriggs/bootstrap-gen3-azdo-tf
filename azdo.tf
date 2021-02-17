@@ -5,7 +5,7 @@ resource "azuredevops_project" "project" {
   # visibility         = "organization"
   version_control    = "Git"
   work_item_template = "Scrum"
-  description = "Updated with Terraform Azure DevOps Provider!"
+  description = "[Managed with Terraform] Updated with Terraform Azure DevOps Provider!"
 }
 
 # resource "tls_private_key" "node-ssh-key" {
@@ -17,7 +17,7 @@ resource "azuredevops_project" "project" {
 resource "azuredevops_variable_group" "vg" {
   project_id   = azuredevops_project.project.id
   name         = "rush-bootstrap-vg"
-  description  = "A variable group with base variables needed for CI/CD"
+  description  = "[Managed with Terraform] A variable group with base variables needed for CI/CD"
   allow_access = true
 
 #   variable {
